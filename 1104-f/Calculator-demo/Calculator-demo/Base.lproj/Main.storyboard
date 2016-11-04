@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0N2-tO-7L9">
+                                <segments>
+                                    <segment title="Add"/>
+                                    <segment title="Subtract"/>
+                                </segments>
+                                <connections>
+                                    <action selector="operationChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="M4k-6v-Nee"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOt-9Y-fOE">
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lWo-1C-4bK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOd-nw-NCe">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="INa-wU-3dH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ePZ-rH-E69"/>
+                                    <constraint firstAttribute="width" constant="42" id="l6s-u4-cHU"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C2y-Se-YBs">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Nm-v1-3W2">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSG-mf-BEq">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0N2-tO-7L9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="1Js-qg-II8"/>
+                            <constraint firstItem="jOt-9Y-fOE" firstAttribute="centerX" secondItem="8Nm-v1-3W2" secondAttribute="centerX" id="2Rj-it-3qO"/>
+                            <constraint firstItem="8Nm-v1-3W2" firstAttribute="leading" secondItem="INa-wU-3dH" secondAttribute="trailing" constant="8" id="4Qh-E8-qjC"/>
+                            <constraint firstItem="C2y-Se-YBs" firstAttribute="centerY" secondItem="INa-wU-3dH" secondAttribute="centerY" id="Bci-xc-FAu"/>
+                            <constraint firstItem="8Nm-v1-3W2" firstAttribute="centerX" secondItem="0N2-tO-7L9" secondAttribute="centerX" id="Hht-26-bTW"/>
+                            <constraint firstItem="KOd-nw-NCe" firstAttribute="leading" secondItem="mSG-mf-BEq" secondAttribute="trailing" constant="8" id="Ici-Ai-jVp"/>
+                            <constraint firstItem="C2y-Se-YBs" firstAttribute="leading" secondItem="8Nm-v1-3W2" secondAttribute="trailing" constant="8" id="VaR-C7-QII"/>
+                            <constraint firstItem="mSG-mf-BEq" firstAttribute="leading" secondItem="C2y-Se-YBs" secondAttribute="trailing" constant="8" id="b9p-xV-bGn"/>
+                            <constraint firstItem="0N2-tO-7L9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bzR-9C-Fsn"/>
+                            <constraint firstItem="C2y-Se-YBs" firstAttribute="width" secondItem="INa-wU-3dH" secondAttribute="width" id="gJh-7J-NP6"/>
+                            <constraint firstItem="KOd-nw-NCe" firstAttribute="centerY" secondItem="mSG-mf-BEq" secondAttribute="centerY" id="iFV-sH-N6Z"/>
+                            <constraint firstItem="jOt-9Y-fOE" firstAttribute="top" secondItem="8Nm-v1-3W2" secondAttribute="bottom" constant="30" id="ih1-RZ-WJK"/>
+                            <constraint firstItem="mSG-mf-BEq" firstAttribute="centerY" secondItem="C2y-Se-YBs" secondAttribute="centerY" id="jUC-on-fMd"/>
+                            <constraint firstItem="C2y-Se-YBs" firstAttribute="height" secondItem="INa-wU-3dH" secondAttribute="height" id="r6m-f7-uaZ"/>
+                            <constraint firstItem="INa-wU-3dH" firstAttribute="centerY" secondItem="8Nm-v1-3W2" secondAttribute="centerY" id="vOr-fg-J6b"/>
+                            <constraint firstItem="8Nm-v1-3W2" firstAttribute="top" secondItem="0N2-tO-7L9" secondAttribute="bottom" constant="43" id="yRZ-eF-VZ0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstTextField" destination="INa-wU-3dH" id="rgA-z2-Ug4"/>
+                        <outlet property="operationLabel" destination="8Nm-v1-3W2" id="qkc-G5-5G3"/>
+                        <outlet property="operationSegmentedControl" destination="0N2-tO-7L9" id="5yE-9v-ZbD"/>
+                        <outlet property="resultLabel" destination="KOd-nw-NCe" id="pH3-9H-TlL"/>
+                        <outlet property="secondTextField" destination="C2y-Se-YBs" id="JFX-fe-xvK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="144"/>
+        </scene>
+    </scenes>
+</document>

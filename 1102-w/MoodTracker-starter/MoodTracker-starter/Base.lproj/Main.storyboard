@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="FY2-3Z-fSX" customClass="labe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendTableViewCell" rowHeight="66" id="FY2-3Z-fSX" customClass="FriendTableViewCell" customModule="MoodTracker_starter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FY2-3Z-fSX" id="TD3-iM-guv">
@@ -54,6 +54,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fea-dc-gC1">
                                             <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                             <state key="normal" title="😡"/>
+                                            <connections>
+                                                <action selector="moodButtonPressed:" destination="FY2-3Z-fSX" eventType="touchUpInside" id="EE6-Dl-njg"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -65,6 +68,11 @@
                                         <constraint firstItem="Fea-dc-gC1" firstAttribute="centerY" secondItem="TD3-iM-guv" secondAttribute="centerY" id="v4c-kE-sUE"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="moodButton" destination="Fea-dc-gC1" id="iok-9c-3uI"/>
+                                    <outlet property="moodDescriptionLabel" destination="qhZ-su-edY" id="QoZ-4d-XwE"/>
+                                    <outlet property="nameLabel" destination="K8c-qa-EME" id="2ny-dE-yD0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -78,7 +86,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hj0-JK-yHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="98"/>
+            <point key="canvasLocation" x="1471" y="45"/>
         </scene>
     </scenes>
 </document>

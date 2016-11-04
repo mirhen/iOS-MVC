@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55ABB74B1DCD02CC00FB4380 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABB74A1DCD02CC00FB4380 /* Mood.swift */; };
+		55ABB74D1DCD02E200FB4380 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ABB74C1DCD02E200FB4380 /* Friend.swift */; };
 		55CCD2441DCA41EC0087F0C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCD2431DCA41EC0087F0C1 /* AppDelegate.swift */; };
 		55CCD2491DCA41EC0087F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55CCD2471DCA41EC0087F0C1 /* Main.storyboard */; };
 		55CCD24B1DCA41EC0087F0C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55CCD24A1DCA41EC0087F0C1 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		55ABB74A1DCD02CC00FB4380 /* Mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mood.swift; path = Model/Mood.swift; sourceTree = "<group>"; };
+		55ABB74C1DCD02E200FB4380 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Friend.swift; path = Model/Friend.swift; sourceTree = "<group>"; };
 		55CCD2401DCA41EC0087F0C1 /* MoodTracker-starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MoodTracker-starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55CCD2431DCA41EC0087F0C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55CCD2481DCA41EC0087F0C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		55CCD2591DCA42970087F0C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55ABB74A1DCD02CC00FB4380 /* Mood.swift */,
+				55ABB74C1DCD02E200FB4380 /* Friend.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -163,7 +169,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55ABB74B1DCD02CC00FB4380 /* Mood.swift in Sources */,
 				55CCD25B1DCA42C10087F0C1 /* FriendTableViewCell.swift in Sources */,
+				55ABB74D1DCD02E200FB4380 /* Friend.swift in Sources */,
 				55CCD2561DCA427D0087F0C1 /* FriendsTableViewController.swift in Sources */,
 				55CCD2441DCA41EC0087F0C1 /* AppDelegate.swift in Sources */,
 			);
