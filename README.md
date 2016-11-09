@@ -42,6 +42,7 @@ You should get into habit of writing your code so that it's readable for other p
   - `#function` prints the name of the function that contains the `print` statement
   - `#file` gives you the name of the file that contains the `print` statement
   - `#line` gives you the line inside the file that contains the `print` statement
+  - An example for a good print statement could be: `print(#file, #line, #function)`. Sometimes it is helpful to include some context as well, so if there are variables that you need to inspect, just append them to the statement: ``print(#file, #line, #function, userName, accountInfo)`
 
 
 #### Example
