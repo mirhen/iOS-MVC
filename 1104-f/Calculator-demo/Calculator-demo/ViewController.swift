@@ -7,42 +7,6 @@
 //
 
 import UIKit
-
-class Calculator {
-  
-  enum Operation: Int { // rawValues of type Int so it goes nicely with the segmented control
-    case addition
-    case subtraction
-  }
-
-  let capabilities = ["Addition", "Subtraction"]
-  let signs = ["+", "-"]
-  
-  func name(for operation: Operation) -> String {
-    return capabilities[operation.rawValue]
-  }
-  
-  func sign(for operation: Operation) -> String {
-    return signs[operation.rawValue]
-  }
-
-  func printCapabilities() {
-    print("I can do the following:")
-    for capability in capabilities {
-      print(capability)
-    }
-  }
-  
-  func add(a: Int, b: Int) -> Int {
-    return a+b
-  }
-  
-  func subtract(a: Int, b: Int) -> Int {
-    return a-b
-  }
-  
-}
-
 class ViewController: UIViewController {
   
   let calculator = Calculator()
@@ -55,6 +19,10 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    // view controller send a message to the calculator requesting it to print
+    // the mathematical operations it supports
+    calculator.printSupportedOperations()
   }
 
   @IBAction func operationChanged(_ sender: UISegmentedControl) {
@@ -78,15 +46,18 @@ class ViewController: UIViewController {
     let result: Int
     switch operationSegmentedControl.selectedSegmentIndex {
     case Calculator.Operation.addition.rawValue:
-      result = a+b
+      // view controller send a message to the calculator requesting it to add a and b
+      // a and b are the "payload" of the message
+      result = calculator.add(a: a, b: b)
     case Calculator.Operation.subtraction.rawValue:
-      result = a-b
+      // view controller send a message to the calculator requesting it to subtract b from a
+      // a and b are the "payload" of the message
+      result = calculator.subtract(a: a, b: b)
     default:
       result = 0
     }
     print(result)
     resultLabel.text = "\(result)"
-    resultLabel.sizeToFit()
   }
 
 }

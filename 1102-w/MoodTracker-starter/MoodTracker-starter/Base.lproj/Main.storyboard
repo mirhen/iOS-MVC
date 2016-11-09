@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FY2-3Z-fSX" id="TD3-iM-guv">
-                                    <frame key="frameInset" width="375" height="65"/>
+                                    <frame key="frameInset" width="375" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Johnny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8c-qa-EME">
@@ -55,7 +55,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                             <state key="normal" title="😡"/>
                                             <connections>
-                                                <action selector="moodButtonPressed:" destination="FY2-3Z-fSX" eventType="touchUpInside" id="EE6-Dl-njg"/>
+                                                <action selector="moodButtonPressed:" destination="FY2-3Z-fSX" eventType="touchUpInside" id="HxT-LF-g1f"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -68,11 +68,6 @@
                                         <constraint firstItem="Fea-dc-gC1" firstAttribute="centerY" secondItem="TD3-iM-guv" secondAttribute="centerY" id="v4c-kE-sUE"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="moodButton" destination="Fea-dc-gC1" id="iok-9c-3uI"/>
-                                    <outlet property="moodDescriptionLabel" destination="qhZ-su-edY" id="QoZ-4d-XwE"/>
-                                    <outlet property="nameLabel" destination="K8c-qa-EME" id="2ny-dE-yD0"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -81,12 +76,79 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="8nk-hD-nlz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hho-DA-H4I"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hho-DA-H4I">
+                            <connections>
+                                <segue destination="Q2A-tL-vd8" kind="presentation" id="TgB-uy-HuQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hj0-JK-yHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471" y="45"/>
+            <point key="canvasLocation" x="991" y="15"/>
+        </scene>
+        <!--Add Friend View Controller-->
+        <scene sceneID="u2d-Pt-NUY">
+            <objects>
+                <viewController id="Q2A-tL-vd8" customClass="AddFriendViewController" customModule="MoodTracker_starter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gCF-mU-4rv"/>
+                        <viewControllerLayoutGuide type="bottom" id="hkY-Zh-dVz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SS9-Sr-0qt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="80W-fN-8Tj">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS5-Ir-Knh">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3J3-mB-rYw">
+                                <segments>
+                                    <segment title="Good 😁"/>
+                                    <segment title="Medium 😑"/>
+                                    <segment title="Bad 😡"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyb-Hv-bSu">
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="Q2A-tL-vd8" eventType="touchUpInside" id="NlF-W7-AyH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ae3-T8-l3N">
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="Q2A-tL-vd8" eventType="touchUpInside" id="ddt-8t-Di3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jyb-Hv-bSu" firstAttribute="top" secondItem="gCF-mU-4rv" secondAttribute="bottom" id="7ai-ow-dW2"/>
+                            <constraint firstItem="80W-fN-8Tj" firstAttribute="leading" secondItem="NS5-Ir-Knh" secondAttribute="leading" id="CSz-Vu-yDu"/>
+                            <constraint firstItem="3J3-mB-rYw" firstAttribute="leading" secondItem="80W-fN-8Tj" secondAttribute="leading" id="No0-Qo-53e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ae3-T8-l3N" secondAttribute="trailing" constant="6" id="RKR-Ld-Rnh"/>
+                            <constraint firstItem="jyb-Hv-bSu" firstAttribute="leading" secondItem="SS9-Sr-0qt" secondAttribute="leadingMargin" constant="-1" id="SGa-ca-6yU"/>
+                            <constraint firstItem="3J3-mB-rYw" firstAttribute="top" secondItem="80W-fN-8Tj" secondAttribute="bottom" constant="24" id="Vue-ob-2aR"/>
+                            <constraint firstItem="80W-fN-8Tj" firstAttribute="trailing" secondItem="Ae3-T8-l3N" secondAttribute="trailing" id="Xer-ij-Z6Q"/>
+                            <constraint firstItem="NS5-Ir-Knh" firstAttribute="top" secondItem="jyb-Hv-bSu" secondAttribute="bottom" constant="53" id="axF-tR-veb"/>
+                            <constraint firstItem="Ae3-T8-l3N" firstAttribute="top" secondItem="gCF-mU-4rv" secondAttribute="bottom" id="evQ-x8-Oxs"/>
+                            <constraint firstItem="80W-fN-8Tj" firstAttribute="top" secondItem="NS5-Ir-Knh" secondAttribute="bottom" constant="8" id="gYZ-VU-uVd"/>
+                            <constraint firstItem="3J3-mB-rYw" firstAttribute="trailing" secondItem="Ae3-T8-l3N" secondAttribute="trailing" id="oSj-7E-lsG"/>
+                            <constraint firstItem="NS5-Ir-Knh" firstAttribute="leading" secondItem="jyb-Hv-bSu" secondAttribute="leading" id="uBb-Uf-d0B"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDx-6x-MVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639" y="15"/>
         </scene>
     </scenes>
 </document>

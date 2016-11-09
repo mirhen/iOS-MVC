@@ -93,3 +93,5 @@ print("The course is a mobile course: \(isMobile)")
  3. Write a function called `isItFinallyWeekend` that takes a `Weekday` and returns a `String` indicating whether the argument is a weekend weekday, e.g.: `"Monday is a regular workday."` or `"Wuhuuuu, it's SATURDAYYYYYYYY."`
  */
 
+
+

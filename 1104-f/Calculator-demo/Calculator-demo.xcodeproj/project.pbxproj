@@ -12,6 +12,7 @@
 		55ABB73C1DCCF26000FB4380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55ABB73A1DCCF26000FB4380 /* Main.storyboard */; };
 		55ABB73E1DCCF26000FB4380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55ABB73D1DCCF26000FB4380 /* Assets.xcassets */; };
 		55ABB7411DCCF26000FB4380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55ABB73F1DCCF26000FB4380 /* LaunchScreen.storyboard */; };
+		55C52F9C1DD37E3100688CC7 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C52F9B1DD37E3100688CC7 /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		55ABB73D1DCCF26000FB4380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55ABB7401DCCF26000FB4380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55ABB7421DCCF26000FB4380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55C52F9B1DD37E3100688CC7 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				55ABB7361DCCF26000FB4380 /* AppDelegate.swift */,
 				55ABB7381DCCF26000FB4380 /* ViewController.swift */,
+				55C52F9B1DD37E3100688CC7 /* Calculator.swift */,
 				55ABB73A1DCCF26000FB4380 /* Main.storyboard */,
 				55ABB73D1DCCF26000FB4380 /* Assets.xcassets */,
 				55ABB73F1DCCF26000FB4380 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				55ABB7391DCCF26000FB4380 /* ViewController.swift in Sources */,
 				55ABB7371DCCF26000FB4380 /* AppDelegate.swift in Sources */,
+				55C52F9C1DD37E3100688CC7 /* Calculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +301,7 @@
 				55ABB7471DCCF26000FB4380 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
