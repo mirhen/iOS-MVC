@@ -6,7 +6,7 @@ This repository is the _master_ repository which will contain all the course mat
 
 Note that you **can not commit to this repository**! However, you can still and go **maintain your own version** of it. In that case, this is what the whole setup looks like:
 
-![Git Setup](./git-overview.png "Overview: 3 Repositories")
+![Git Setup](./resources/git-overview.png "Overview: 3 Repositories")
 
 
 Here are the steps that you need to perform to setup this infrastructure:
@@ -79,11 +79,11 @@ Here are two benefits that you get from this approach:
 
 - You can now use the keyboard shortcut `cmd` + `alt` + `shift` + `←` to collapse all methods and get a nice overview of the code
 
-![Folded Methods](./folded.png "Use `cmd` + `alt` + `shift` to fold methods")
+![Folded Methods](./resources/folded.png "Use `cmd` + `alt` + `shift` to fold methods")
 
 
 - You can now use the "quick viewer" in Xcode to see the whole content of your file nicely organized
 
-![Quick Viewer](./quick-viewer.png "Use Xcode's 'Quick Viewer' to have a nice overview of the file's content")
+![Quick Viewer](./resources/quick-viewer.png "Use Xcode's 'Quick Viewer' to have a nice overview of the file's content")
 
 
