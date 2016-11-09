@@ -20,12 +20,12 @@ Here are the steps that you need to perform to setup this infrastructure:
 `git remote add <first-name> https://github.com/<github-user>/iOS-MVC.git`
 
 4. push the repo to the newly created remote:
-`git push -u origin <first-name>`
+`git push -u <first-name> master`
 
-5. when you want to access new materials now, all you need to do is
+5. when you want to access new materials now, all you need to do is:
 `git pull`
 
-6. when you worked on a challenge or a starter project, you can push it to your own remote repository with
+6. when you worked on a challenge or a starter project, you can push it to your own remote repository with:
 `git push`
 
 
