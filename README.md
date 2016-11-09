@@ -10,16 +10,15 @@ Note that you can not commit to this repository! However, you can still and go m
 
 These are the steps that you need to perform to achieve this:
 
-1. clone the repository
-
+1. clone the repository:
 `git clone https://github.com/MakeSchool-18/iOS-MVC`
 
 2. create your own repository **on your Github account** named: `iOS-MVC`
 
-3. add this repository as a _remote_ to the local one (note: you need to give a name to the _remote_, e.g. your first name)
+3. add this repository as a _remote_ to the local one (note: you need to give a name to the _remote_, e.g. your first name):
 `git remote add <first-name> https://github.com/<github-user>/iOS-MVC.git`
 
-4. push the repo to the newly created remote
+4. push the repo to the newly created remote:
 `git push -u origin <first-name>`
 
 5. when you want to access new materials now, all you need to do is
@@ -71,10 +70,13 @@ You should get into habit of writing your code so that it's readable for other p
 
 Here are two benefits that you get from this approach:
 
-1. You can now use the keyboard shortcut `cmd` + `alt` + `shift` + `←` to collapse all methods and get a nice overview of the code
+You can now use the keyboard shortcut `cmd` + `alt` + `shift` + `←` to collapse all methods and get a nice overview of the code
+
 ![Folded Methods](./folded.png "Use `cmd` + `alt` + `shift` to fold methods")
 
-2. You can now use the "quick viewer" in Xcode to see the whole content of your file nicely organized [screenshot]
+
+You can now use the "quick viewer" in Xcode to see the whole content of your file nicely organized
+
 ![Quick Viewer](./quick-viewer.png "Use Xcode's 'Quick Viewer' to have a nice overview of the file's content")
 
 
