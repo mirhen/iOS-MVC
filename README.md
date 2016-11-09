@@ -2,13 +2,14 @@
 
 ## Working with this Github repository
 
-This repository is the _master_ repository which will contain all the course materials. That includes slides, coding challenges and starter code for larger projects.
+This repository is the _master_ repository which will contain all the course materials. That includes **slides, coding challenges and starter code** for larger projects.
 
-Note that you can not commit to this repository! However, you can still and go maintain _your own version of this repo_. This is what the whole setup looks like:
+Note that you **can not commit to this repository**! However, you can still and go maintain _your own version of this repo_. In that case, this is what the whole setup looks like:
 
 ![Git Setup](./git-overview.png "Overview: 3 Repositories")
 
-These are the steps that you need to perform to achieve this:
+
+Here are the steps that you need to perform to setup this infrastructure:
 
 1. clone the repository:
 `git clone https://github.com/MakeSchool-18/iOS-MVC`
@@ -70,12 +71,12 @@ You should get into habit of writing your code so that it's readable for other p
 
 Here are two benefits that you get from this approach:
 
-You can now use the keyboard shortcut `cmd` + `alt` + `shift` + `←` to collapse all methods and get a nice overview of the code
+- You can now use the keyboard shortcut `cmd` + `alt` + `shift` + `←` to collapse all methods and get a nice overview of the code
 
 ![Folded Methods](./folded.png "Use `cmd` + `alt` + `shift` to fold methods")
 
 
-You can now use the "quick viewer" in Xcode to see the whole content of your file nicely organized
+- You can now use the "quick viewer" in Xcode to see the whole content of your file nicely organized
 
 ![Quick Viewer](./quick-viewer.png "Use Xcode's 'Quick Viewer' to have a nice overview of the file's content")
 
