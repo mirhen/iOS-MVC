@@ -37,6 +37,11 @@ You should get into habit of writing your code so that it's readable for other p
 2. Methods in a class should be separated with one line break in between them
 3. Use two line breaks before starting a new section (this is the **only time where using more than one line break is allowed!**)
 4. Generally, line breaks should be used with great care! Make sure to only use line breaks when you want make it clear that a certain code chunk (_paragraph_) bundles similar functionality (in these cases, it is often a good idea to put a comment on top the paragraph that shortly describes what the functionality of this paragraph is)
+5. Use expressive variable and function names (no `var foo`, `var blaaa`, `var xxxx`)
+6. For debugging with `print` statements, use an indication of where the print statement happened:
+  - `#function` prints the name of the function that contains the `print` statement
+  - `#file` gives you the name of the file that contains the `print` statement
+  - `#line` gives you the line inside the file that contains the `print` statement
 
 
 #### Example
