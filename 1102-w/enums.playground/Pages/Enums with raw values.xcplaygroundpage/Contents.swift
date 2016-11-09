@@ -52,51 +52,63 @@ Weekday2.monday.rawValue
  3. Model a type called `Month` using an `enum`. That type should represent all the different months in one year. 
  4. Write a function that returns a `String` and indicates at which position this month is inside a year, e.g.: `March is the 3rd month of the year`.
  */
+
 enum CardinalDirection: String{
-  case north = "↑"
-  case northeast = "↑→"
-  case northwest = "↑←"
-  case east = "→"
-  case west = "←"
+    case north = "⬆️"
+    case south = "⬇️"
+    case east = "➡️"
+    case west = "⬅️"
 }
 
 func help(direction: CardinalDirection) -> String {
-  let directionHome = direction.rawValue
-  let answer = "Go \(directionHome) by in order to arrive home."
-  
-  switch direction {
-  default:
-    return answer
-  }
+    var gettingHome: String
+    
+    switch direction {
+    case .south, .west:
+        gettingHome = "This direction (\(direction.rawValue)) does not help the ship get home"
+    case .north, .east :
+        gettingHome = "This direction (\(direction.rawValue)) does help the ship get home"
+    }
+    return gettingHome
 }
 
-print(help(direction: CardinalDirection.west))
-print(help(direction: CardinalDirection.northeast))
+help(direction: .north)
 
-enum Month: String {
-  case january = "1st"
-  case february = "2nd"
-  case march = "3rd"
-  case april = "4th"
-  case may = "5th"
-  case june = "6th"
-  case july = "7th"
-  case august = "8th"
-  case september = "9th"
-  case october = "10th"
-  case november = "11th"
-  case december = "12th"
+enum Month {
+    case january
+    case febuary
+    case march
+    case april
+    case may
+    case june
+    case july
+    case augest
+    case september
+    case october
+    case november
+    case december
+    
 }
 
-func positionOfTheyYear (month: Month) -> String{
-  let capitalMonth = "\(month)".capitalized
-  let position = month.rawValue
-  let answer = "\(capitalMonth) is the \(position) month of the year."
-  
-  return answer
+func getPositionOfMonth(month: Month) -> String {
+    var position: String
+    
+    switch month {
+        case .january :
+            position = "\(month) is the \(month.hashValue + 1)st month of the year"
+        case .febuary:
+            position = "\(month) is the \(month.hashValue + 1)nd month of the year"
+        case .march:
+            position = "\(month) is the \(month.hashValue + 1)rd month of the year"
+        default:
+            position = "\(month) is the \(month.hashValue + 1)th month of the year"
+    }
+    
+    return position
 }
 
-print(positionOfTheyYear(month: Month.january))
+getPositionOfMonth(month: .december)
+
 
 
 
