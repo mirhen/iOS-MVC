@@ -4,7 +4,7 @@
 
 This repository is the _master_ repository which will contain all the course materials. That includes **slides, coding challenges and starter code** for larger projects.
 
-Note that you **can not commit to this repository**! However, you can still and go maintain _your own version of this repo_. In that case, this is what the whole setup looks like:
+Note that you **can not commit to this repository**! However, you can still and go **maintain your own version** of it. In that case, this is what the whole setup looks like:
 
 ![Git Setup](./git-overview.png "Overview: 3 Repositories")
 
