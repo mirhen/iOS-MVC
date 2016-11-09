@@ -11,6 +11,7 @@ Note that you can not commit to this repository! However, you can still and go m
 These are the steps that you need to perform to achieve this:
 
 1. clone the repository
+
 `git clone https://github.com/MakeSchool-18/iOS-MVC`
 
 2. create your own repository **on your Github account** named: `iOS-MVC`
