@@ -23,7 +23,7 @@ Here are the steps that you need to perform to setup this infrastructure:
 `git push -u <first-name> master`
 
 5. when you want to access new materials now, all you need to do is:
-`git pull`
+`git pull origin master`
 
 6. when you worked on a challenge or a starter project, you can push it to your own remote repository with:
 `git push`
@@ -43,6 +43,7 @@ You should get into habit of writing your code so that it's readable for other p
   - `#file` gives you the name of the file that contains the `print` statement
   - `#line` gives you the line inside the file that contains the `print` statement
   - An example for a good print statement could be: `print(#file, #line, #function)`. Sometimes it is helpful to include some context as well, so if there are variables that you need to inspect, just append them to the statement: `print(#file, #line, #function, userName, accountInfo)`
+7. Remove boilerplate code from your files that doesn't do anything for you. For example, when you create a new `UIViewController` subclass, there is usually some predefined boilerplate code generated for you. Apple means well, but if you don't use this code you should delete it. Examples for this are `didReceiveMemoryWarning()` or the commented version of  `prepare(for segue: UIStoryboardSegue, sender: Any?)`, even `viewDidLoad()` if you don't end up using it. 
 
 
 #### Example

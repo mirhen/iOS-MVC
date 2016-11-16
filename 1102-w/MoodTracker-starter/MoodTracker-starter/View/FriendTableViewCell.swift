@@ -9,24 +9,43 @@
 import UIKit
 
 class FriendTableViewCell: UITableViewCell {
-
-    var currentFriend: Friend? 
     
+    //Setup IBOutlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var moodDescriptLabel: UILabel!
     @IBOutlet weak var moodButton: UIButton!
     
+    //Other Variables
+    var currentFriend: Friend? {
+        didSet {
+            updateUI()
+        }
+    }
     var tableViewController: FriendsTableViewController? = nil
-
+    
+    
+    //MARK: Actions
+    
     @IBAction func moodButtonPressed(_ sender: AnyObject) {
         
-        tableViewController?.setUIForCurrentMoodState(forFriend: currentFriend!, newFriendMood: updateMood())
+        if let controller = tableViewController {
+            if let friend = currentFriend {
+                print(#function, friend.mood)
+                controller.updateFriendsMood(friend: friend, newMood: updateMood())
+            }
+        }
     }
     
+    
+    // MARK: Helpers
+    
     private func updateMood() -> Mood {
-        var mood: Mood = currentFriend!.mood
+        var mood: Mood = .happy
         
         if let friend = currentFriend {
+            mood = friend.mood
+            print(#function, friend.mood)
+            
             switch friend.mood {
             case .happy:
                 mood = .medium
@@ -35,10 +54,26 @@ class FriendTableViewCell: UITableViewCell {
             case .mad:
                 mood = .happy
             }
+            print(#function, friend.mood)
         }
-       return mood
+        return mood
+    }
+    
+    private func updateUI() {
+        if let friend = currentFriend {
+            nameLabel.text = friend.name
+            moodButton.setTitle(friend.mood.rawValue, for: .normal)
+            switch friend.mood {
+            case .happy:
+                moodDescriptLabel.text = "todays a great day :)"
+            case .medium:
+                moodDescriptLabel.text = "when can I go home?"
+            case .mad:
+                moodDescriptLabel.text = "LEAVE ME ALONE"
+            }
+        }
     }
 }
-    
+
 
 

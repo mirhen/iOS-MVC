@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ajQ-Vf-7vY">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="6xY-wK-RXz">
+            <objects>
+                <viewController id="eiF-t4-2JE" customClass="PickerViewController" customModule="delegate_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HHz-K5-fUP"/>
+                        <viewControllerLayoutGuide type="bottom" id="lJN-sz-34X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="imG-pe-ZzS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ank-vP-WLv"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;City&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOm-gF-EX1">
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8d-9w-htC">
+                                <string key="text">1. Make the picker view display the five cities that you find in the "cities"-array in "PickerViewController.swift" 2. Make the label below display the currently selected city</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ank-vP-WLv" secondAttribute="trailing" id="4iJ-KA-MJc"/>
+                            <constraint firstItem="Ank-vP-WLv" firstAttribute="centerY" secondItem="imG-pe-ZzS" secondAttribute="centerY" id="A3v-LU-TQ4"/>
+                            <constraint firstItem="y8d-9w-htC" firstAttribute="top" secondItem="HHz-K5-fUP" secondAttribute="bottom" constant="36" id="NMD-p6-xUz"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="y8d-9w-htC" secondAttribute="leading" id="fhN-ed-6p1"/>
+                            <constraint firstItem="dOm-gF-EX1" firstAttribute="centerX" secondItem="imG-pe-ZzS" secondAttribute="centerX" id="oaH-Oh-xwC"/>
+                            <constraint firstItem="lJN-sz-34X" firstAttribute="top" secondItem="dOm-gF-EX1" secondAttribute="bottom" constant="131" id="r2i-aL-GXg"/>
+                            <constraint firstItem="Ank-vP-WLv" firstAttribute="leading" secondItem="imG-pe-ZzS" secondAttribute="leading" id="tHf-dN-vRP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y8d-9w-htC" secondAttribute="trailing" id="wzh-3Y-vcu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="jsg-mg-ZM1"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="dOm-gF-EX1" id="osB-C1-zZK"/>
+                        <outlet property="pickerView" destination="Ank-vP-WLv" id="7rL-kp-A9R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nwh-yN-3zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710" y="467"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="ctn-pM-IaV">
+            <objects>
+                <viewController id="Lx4-8Y-SwQ" customClass="TextFieldViewController" customModule="delegate_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tC8-Nf-qfd"/>
+                        <viewControllerLayoutGuide type="bottom" id="ujh-ck-NNX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5DP-Oz-o7H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make everything in the text field be typed as uppercase, even if the user types in lowercase on the keyboard." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph1-Pm-omT">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KEG-RI-uPM">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ph1-Pm-omT" firstAttribute="top" secondItem="tC8-Nf-qfd" secondAttribute="bottom" constant="35" id="9nz-eR-2d9"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ph1-Pm-omT" secondAttribute="leading" id="Qxk-Na-kck"/>
+                            <constraint firstItem="KEG-RI-uPM" firstAttribute="top" secondItem="ph1-Pm-omT" secondAttribute="bottom" constant="57" id="cDi-nn-wZx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ph1-Pm-omT" secondAttribute="trailing" id="cyj-xv-d9a"/>
+                            <constraint firstItem="KEG-RI-uPM" firstAttribute="leading" secondItem="ph1-Pm-omT" secondAttribute="leading" id="uIv-UW-gCP"/>
+                            <constraint firstItem="KEG-RI-uPM" firstAttribute="trailing" secondItem="ph1-Pm-omT" secondAttribute="trailing" id="zy9-4l-EGQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="o6e-XS-2WL"/>
+                    <connections>
+                        <outlet property="textField" destination="KEG-RI-uPM" id="dEN-fd-rDT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mF9-5e-7DP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="-187"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7GG-Lw-OgC">
+            <objects>
+                <tabBarController id="ajQ-Vf-7vY" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Nnn-Rs-Txa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Lx4-8Y-SwQ" kind="relationship" relationship="viewControllers" id="diY-sP-sDf"/>
+                        <segue destination="eiF-t4-2JE" kind="relationship" relationship="viewControllers" id="7cT-si-vuK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1DI-aj-KTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340" y="148"/>
+        </scene>
+    </scenes>
+</document>
