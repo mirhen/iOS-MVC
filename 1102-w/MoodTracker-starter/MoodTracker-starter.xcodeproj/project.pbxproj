@@ -13,6 +13,7 @@
 		55CCD24E1DCA41EC0087F0C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55CCD24C1DCA41EC0087F0C1 /* LaunchScreen.storyboard */; };
 		55CCD2561DCA427D0087F0C1 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCD2551DCA427D0087F0C1 /* FriendsTableViewController.swift */; };
 		55CCD25B1DCA42C10087F0C1 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CCD25A1DCA42C10087F0C1 /* FriendTableViewCell.swift */; };
+		E61F77BB1DDCE46F001BE70A /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F77BA1DDCE46F001BE70A /* AddFriendViewController.swift */; };
 		E6267A401DCD0C5000627AFA /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6267A3F1DCD0C5000627AFA /* Mood.swift */; };
 		E6267A421DCD0CC600627AFA /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6267A411DCD0CC600627AFA /* Friend.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		55CCD24F1DCA41EC0087F0C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55CCD2551DCA427D0087F0C1 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsTableViewController.swift; path = "View Controllers/FriendsTableViewController.swift"; sourceTree = "<group>"; };
 		55CCD25A1DCA42C10087F0C1 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendTableViewCell.swift; path = View/FriendTableViewCell.swift; sourceTree = "<group>"; };
+		E61F77BA1DDCE46F001BE70A /* AddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 		E6267A3F1DCD0C5000627AFA /* Mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		E6267A411DCD0CC600627AFA /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				55CCD2551DCA427D0087F0C1 /* FriendsTableViewController.swift */,
+				E61F77BA1DDCE46F001BE70A /* AddFriendViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E61F77BB1DDCE46F001BE70A /* AddFriendViewController.swift in Sources */,
 				E6267A421DCD0CC600627AFA /* Friend.swift in Sources */,
 				E6267A401DCD0C5000627AFA /* Mood.swift in Sources */,
 				55CCD25B1DCA42C10087F0C1 /* FriendTableViewCell.swift in Sources */,

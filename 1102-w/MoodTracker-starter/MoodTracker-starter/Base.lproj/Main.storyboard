@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D5F-Ns-PwS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D5F-Ns-PwS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,23 +38,26 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsTableViewCell" rowHeight="66" id="FY2-3Z-fSX" customClass="FriendTableViewCell" customModule="MoodTracker_starter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="66"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FY2-3Z-fSX" id="TD3-iM-guv">
-                                    <frame key="frameInset" width="375" height="65.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Johnny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8c-qa-EME">
+                                            <rect key="frame" x="8" y="8" width="63" height="24"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get off my lawn!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhZ-su-edY">
+                                            <rect key="frame" x="8" y="40" width="118.5" height="18"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fea-dc-gC1">
+                                            <rect key="frame" x="326" y="9.5" width="33" height="47"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                             <state key="normal" title="😡"/>
                                             <connections>
@@ -72,6 +78,7 @@
                                     <outlet property="moodButton" destination="Fea-dc-gC1" id="TQP-7G-gfu"/>
                                     <outlet property="moodDescriptLabel" destination="qhZ-su-edY" id="Nf5-cc-lwQ"/>
                                     <outlet property="nameLabel" destination="K8c-qa-EME" id="ZCe-u2-7zb"/>
+                                    <segue destination="jN9-6G-KXg" kind="presentation" identifier="UpdateFriendSegue" id="xpg-f2-BBz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -81,12 +88,96 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="8nk-hD-nlz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hho-DA-H4I"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hho-DA-H4I">
+                            <connections>
+                                <segue destination="jN9-6G-KXg" kind="presentation" identifier="NewFriendSegue" id="rs5-Ri-iZO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hj0-JK-yHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="892" y="112"/>
         </scene>
+        <!--Add Friend View Controller-->
+        <scene sceneID="POs-ZU-cPO">
+            <objects>
+                <viewController id="jN9-6G-KXg" customClass="AddFriendViewController" customModule="MoodTracker_starter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2DQ-tL-8z8"/>
+                        <viewControllerLayoutGuide type="bottom" id="epl-Zs-NlF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VyI-LU-sNa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddK-Qs-DY7">
+                                <rect key="frame" x="319" y="28" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="jN9-6G-KXg" eventType="touchUpInside" id="QjF-mm-kPw"/>
+                                    <segue destination="eSX-TF-Bma" kind="unwind" identifier="save" unwindAction="unwindToFriendsTableViewControllerWithSegue:" id="eVB-ZX-yr0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ly1-3X-Fic">
+                                <rect key="frame" x="16" y="116" width="113" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="nx7-1V-AAh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="76i-UI-iJA">
+                                <rect key="frame" x="16" y="145" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7BM-2M-Eyw">
+                                <rect key="frame" x="16" y="195" width="343" height="29"/>
+                                <segments>
+                                    <segment title="😀"/>
+                                    <segment title="😐"/>
+                                    <segment title="😡"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXr-B0-YEQ">
+                                <rect key="frame" x="16" y="28" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="jN9-6G-KXg" eventType="touchUpInside" id="jkF-ZF-1If"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ddK-Qs-DY7" secondAttribute="trailing" constant="6" id="72W-NA-hvQ"/>
+                            <constraint firstItem="KXr-B0-YEQ" firstAttribute="baseline" secondItem="ddK-Qs-DY7" secondAttribute="baseline" id="Fax-pO-h9d"/>
+                            <constraint firstItem="76i-UI-iJA" firstAttribute="leading" secondItem="7BM-2M-Eyw" secondAttribute="leading" id="Fel-aI-5nK"/>
+                            <constraint firstItem="KXr-B0-YEQ" firstAttribute="leading" secondItem="VyI-LU-sNa" secondAttribute="leadingMargin" id="QWc-YR-bWs"/>
+                            <constraint firstItem="76i-UI-iJA" firstAttribute="trailing" secondItem="7BM-2M-Eyw" secondAttribute="trailing" id="i6I-dB-LCg"/>
+                            <constraint firstItem="7BM-2M-Eyw" firstAttribute="top" secondItem="76i-UI-iJA" secondAttribute="bottom" constant="20" id="kwN-Us-TLt"/>
+                            <constraint firstItem="Ly1-3X-Fic" firstAttribute="top" secondItem="KXr-B0-YEQ" secondAttribute="bottom" constant="58" id="lsJ-H1-1en"/>
+                            <constraint firstItem="76i-UI-iJA" firstAttribute="top" secondItem="Ly1-3X-Fic" secondAttribute="bottom" constant="8" symbolic="YES" id="nsC-j2-dO0"/>
+                            <constraint firstItem="KXr-B0-YEQ" firstAttribute="top" secondItem="2DQ-tL-8z8" secondAttribute="bottom" constant="8" symbolic="YES" id="tex-yB-JAC"/>
+                            <constraint firstItem="76i-UI-iJA" firstAttribute="trailing" secondItem="VyI-LU-sNa" secondAttribute="trailingMargin" id="v5S-gl-Hxv"/>
+                            <constraint firstItem="Ly1-3X-Fic" firstAttribute="leading" secondItem="76i-UI-iJA" secondAttribute="leading" id="xyb-bF-D3u"/>
+                            <constraint firstItem="KXr-B0-YEQ" firstAttribute="leading" secondItem="Ly1-3X-Fic" secondAttribute="leading" id="yJb-2u-ee2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="moodSegmentedControl" destination="7BM-2M-Eyw" id="Uf1-oy-kXb"/>
+                        <outlet property="nameTextField" destination="76i-UI-iJA" id="HNg-ea-kNl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tMo-RK-zvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="eSX-TF-Bma" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="112"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="rs5-Ri-iZO"/>
+    </inferredMetricsTieBreakers>
 </document>

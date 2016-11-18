@@ -9,7 +9,7 @@
 import Foundation
 
 class Friend {
-    let name: String
+    var name: String
     var mood: Mood
     
     init(name: String, mood: Mood) {

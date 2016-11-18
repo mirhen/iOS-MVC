@@ -19,7 +19,6 @@ class FriendsTableViewController: UITableViewController {
         Friend(name: "Jose", mood: .medium),
         ]
     
-    
     //MARK: View Controller Lifecycle
     
     override func viewDidLoad() {
@@ -68,5 +67,23 @@ class FriendsTableViewController: UITableViewController {
         //                currentFriend.mood = newMood
         //            }
         //        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? AddFriendViewController {
+            if segue.identifier == "UpdateFriendSegue" {
+                let index = tableView.indexPathForSelectedRow
+                destination.currentFriend = friendArray[(index?.row)!]
+            }
+            else if segue.identifier == "NewFriendSegue" {
+                destination.newFriend = { (friend: Friend) in
+                    self.friendArray.append(friend)
+                }
+            }
+        }
+    }
+    
+    @IBAction func unwindToFriendsTableViewController(segue: UIStoryboardSegue) {
+        
     }
 }

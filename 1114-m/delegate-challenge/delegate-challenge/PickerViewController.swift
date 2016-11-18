@@ -8,7 +8,9 @@
 
 import UIKit
 
-class PickerViewController: UIViewController {
+class PickerViewController: UIViewController, UIPickerViewDelegate{
+    
+    
   
   @IBOutlet weak var pickerView: UIPickerView!
   @IBOutlet weak var cityLabel: UILabel!
@@ -17,6 +19,13 @@ class PickerViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    pickerView.delegate = self
   }
-  
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return cities.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        cityLabel.text = cities[row]
+        return cities[row]
+    }
 }
