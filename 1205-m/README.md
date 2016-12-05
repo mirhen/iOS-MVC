@@ -27,6 +27,12 @@ As we can't know anything about a **Controller** class inside the `BoardView`, b
 This way, the `BoardView` can be _plugged in_ to any other project, and any class can become the `BoardView`'s `delegate` and handle the touch event.
 
 
+#### Public API
+
+Think about what the _Public API_ of this component should look like. _How_ can other classes (e.g. view controllers) interact with it? What kind of messages should they send to the the class? What needs to happen?
+
+Recall that the term _API_ stands for _Application Programming Interface_. Nowadays, we mostly refer to Web APIs when using this term, but in fact every piece of code that we write has an API, i.e. an interface that defines how to interact with it. When talking about the _API_ of a class, we refer to its _methods_ and _properties_ that can be used by other classes. Everything that is not essential to the usage of the class from the outside, should be _hidden_ (i.e. `private`) from the outside world. Hiding implementation details from other classes is called [_encapsulation_](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)). The purpose of encapsulation is to make sure that our class is used in the right ways by its users.
+
 
 ## Using a Playground to implement individual parts
 
