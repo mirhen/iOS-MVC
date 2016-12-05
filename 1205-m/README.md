@@ -41,8 +41,8 @@ Rather than starting with a new Xcode project right away, we are going to use Pl
 
 In particular, we are going to approach the project as follows:
 
-1. Build a `BoardView` class in Playground
-2. Implementing the game logic for the TicTacToe game in a Playground, this part also includes building the right **Model**
+1. Build a `BoardView` class in Playground ([More info](https://youtu.be/t8CdNn0wOBw))
+2. Implementing the game logic for the TicTacToe game in a Playground, this part also includes building the right **Model** ([More info](https://www.youtube.com/watch?v=8j-R9gcUQjw))
 
 
 ## Hints
