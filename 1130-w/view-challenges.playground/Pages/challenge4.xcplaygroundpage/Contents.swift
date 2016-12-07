@@ -18,4 +18,35 @@ let colors: [UIColor] = [.green, .gray, .purple, .yellow, .red, .orange, .lightG
  
  (Make sure to comment out the first implementation once you start working on the second one to avoid confusion.)
  */
+//let squareWidth = Int(canvas.frame.width) / 3
+//let squareHeight = squareWidth
+//var squareX = squareWidth
+//var squareY = squareHeight
+//var c = -1
+//for i in 0..<3 {
+//    for z in 0..<3 {
+//    let squareFrame = CGRect(x: squareX * z, y: squareY * i, width: squareWidth, height: squareHeight)
+//    let squareView = UIView(frame: squareFrame)
+//    c += 1
+//    squareView.backgroundColor = colors[c]
+//    canvas.addSubview(squareView)
+//    }
+//}
 
+//Auto Layout Implementation
+let squareWidth = canvas.frame.width/3
+let squareHeight = canvas.frame.height/3
+var c = -1
+for i in 0..<3 {
+    for z in 0..<3 {
+        let squareView = UIView()
+        c += 1
+        squareView.translatesAutoresizingMaskIntoConstraints = false
+        squareView.backgroundColor = colors[c]
+        canvas.addSubview(squareView)
+        NSLayoutConstraint(item: squareView, attribute: .width, relatedBy: .equal, toItem: canvas, attribute: .width, multiplier: 1/3, constant: 0).isActive = true
+        NSLayoutConstraint(item: squareView, attribute: .height, relatedBy: .equal, toItem: canvas, attribute: .height, multiplier: 1/3, constant: 0).isActive = true
+        NSLayoutConstraint(item: squareView, attribute: .leading, relatedBy: .equal, toItem: canvas, attribute: .leading, multiplier: 1, constant: squareWidth * CGFloat(z)).isActive = true
+        NSLayoutConstraint(item: squareView, attribute: .top, relatedBy: .equal, toItem: canvas, attribute: .top, multiplier: 1, constant: squareHeight * CGFloat(i)).isActive = true
+    }
+}
